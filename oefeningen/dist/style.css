@@ -1,0 +1,36 @@
+.teller {
+  position: fixed;
+}
+
+body {
+  height: 8000px; /* Just to make the page scrollable for demonstration */
+}
+
+.achteruit {
+  color: red; /* Change the color to red when scrolling up */
+}
+
+.sign {
+  position: fixed;
+}
+
+.sign[data-km="10"] {
+  top: 100px; /* Position for the 10 km sign */
+}
+
+.sign[data-km="25"] {
+  top: 200px; /* Position for the 25 km sign */
+}
+
+.sign[data-km="40"] {
+  top: 300px; /* Position for the 40 km sign */
+}
+
+.gepasseerd {
+  background-color: green; /* Change the background color when passed */
+}
+
+.petrol {
+  position: fixed;
+  left: 50%;
+}
