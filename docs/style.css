@@ -23,9 +23,23 @@ nav {
   gap: 30px;
 }
 
-li {
+.nav-item {
   display: inline;
   margin: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hamburgerknop {
+  display: none;
+  cursor: pointer;
 }
 
 a {
@@ -36,7 +50,7 @@ a {
 }
 
 .logo {
-  height: 100px;
+  height: 75px;
   vertical-align: middle;
 }
 
@@ -65,4 +79,32 @@ footer {
 .wheel {
   transform-box: fill-box;
   transform-origin: center;
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #024e02;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburgerknop {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: white;
+  }
 }

@@ -1,3 +1,5 @@
+console.log("Portfolio script loaded");
+
 const scrollSpeed = 0.5;
 const wheels: NodeListOf<SVGGElement> = document.querySelectorAll(".wheel");
 
@@ -12,3 +14,18 @@ window.addEventListener("scroll", () => {
         }
     }
 });
+
+const knop = document.querySelector(".hamburgerknop");
+if (knop) {
+    knop.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        let isOpen = false;
+
+        if (navLinks) {
+            isOpen = navLinks.classList.toggle("open");
+        }
+
+        knop.setAttribute("aria-expanded", String(isOpen));
+    });
+}
+
